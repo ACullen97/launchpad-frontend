@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <h1>Evently.</h1>
+      <h1 className="logo-title">Evently.</h1>
 
 <div className="navbar-search">
 
@@ -18,8 +19,8 @@ const Navbar = () => {
       </div>
 
       <ul className="navbar-menu">
-        <li onClick={()=>{setMenu("home")}} className={menu==="home"?"active":""}>Home</li>
-        <li onClick={()=>{setMenu("events")}} className={menu==="events"?"active":""}>Events</li>
+        <li onClick={()=>{setMenu("home")}} className={menu==="home"?"active":""}><Link to="/">Home</Link></li>
+        <li onClick={()=>{setMenu("events")}} className={menu==="events"?"active":""}><Link to="/events">Events</Link></li>
         <li onClick={()=>{setMenu("contact")}} className={menu==="contact"?"active":""}>Contact</li>
  
       </ul>

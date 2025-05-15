@@ -1,0 +1,8 @@
+.card-holder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview-events h1{
+    padding-bottom: 10px;
+}

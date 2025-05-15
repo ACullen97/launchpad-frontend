@@ -1,0 +1,17 @@
+.card-outer {
+  width: 18rem;
+  background-color: lightblue;
+  border-radius: 20px;
+
+
+ 
+}
+
+.card-image{
+ background-image: url("/src/assets/event-placeholder.jpg");
+ width: 18rem;
+ height: 18rem;
+ object-fit: contain;
+
+}
+

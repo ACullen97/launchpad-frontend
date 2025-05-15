@@ -9,6 +9,10 @@
   width: 150px;
 }
 
+.logo-title{
+  color: #131388;
+}
+
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -33,7 +37,7 @@
   background: transparent;
   font-size: 16px;
   color: #49557e;
-  border: 1px solid blue;
+  border: 1px solid #131388;
   padding: 10px 30px;
   border-radius: 50px;
   cursor: pointer;
