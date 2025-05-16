@@ -15,7 +15,7 @@ const EventCard = (props) => {
         <Card.Text>
          {props.description}
         </Card.Text>
-        <Link to={`events/${props.id}`}><Button variant="primary">View Event</Button></Link>
+        <Link to={`/events/${props.id}`}><Button variant="primary">View Event</Button></Link>
       </Card.Body>
     </Card>
   )

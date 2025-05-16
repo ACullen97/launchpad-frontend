@@ -1,9 +1,10 @@
 import React from 'react'
+import AllEvents from '../../components/AllEvents/AllEvents'
 
 const Events = () => {
   return (
     <div>
-      <p>Events</p>
+      <AllEvents/>
     </div>
   )
 }

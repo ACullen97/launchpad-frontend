@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 const ViewEvent = () => {
 
     let paramID = useParams();
-    console.log(paramID.id, "useParams ID");
 
   return (
     <div>
