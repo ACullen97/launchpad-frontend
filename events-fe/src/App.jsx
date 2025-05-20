@@ -6,16 +6,21 @@ import Events from './pages/Events/Events.jsx'
 import ViewEvent from './pages/ViewEvent/ViewEvent.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import LoginPopup from './components/LoginPopup/LoginPopup.jsx'
+import SignUpPopup from './components/SignUpPopup/SignUpPopup.jsx'
 
 const App = () => {
 
   const [showLogin, setShowLogin] = useState(false);
 
+  const [showSignUp, setShowSignUp] = useState(false);
+
+
   return (
     <>
     {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></>}
+     {showSignUp ? <SignUpPopup setShowSignUp={setShowSignUp}/> : <></>}
     <div className='app'>
-      <Navbar setShowLogin={setShowLogin}/>
+      <Navbar setShowLogin={setShowLogin} setShowSignUp={setShowSignUp}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/events" element={<Events/>}/>

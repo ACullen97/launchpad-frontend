@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = ({setShowLogin, setShowSignUp}) => {
 
   const [menu, setMenu] = useState("home");
 
@@ -27,7 +27,7 @@ const Navbar = ({setShowLogin}) => {
 <div className="navbar-right">
 
     <button onClick={() => {setShowLogin(true)}}>Log In</button>
-        <button>Sign Up</button>
+    <button onClick={() => {setShowSignUp(true)}}>Sign Up</button>
 
 </div>
            

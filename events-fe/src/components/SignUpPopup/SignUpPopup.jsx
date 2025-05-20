@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import "./LoginPopup.css";
+import React, { useState } from 'react'
+import './SignUpPopup.css'
 
-const LoginPopup = ({ setShowLogin}) => {
+const SignUpPopup = ({setShowSignUp}) => {
 
-    const [currState, setCurrState] = useState("Log In");
+        const [currState, setCurrState] = useState('Sign Up');
 
-  return (
+ return (
     <div className="login-popup">
       <form className="login-popup-container">
         <div className="login-popup-title">
           <h2>{currState}</h2>
-          <button onClick={() => setShowLogin(false)}>X</button>
+          <button onClick={() => setShowSignUp(false)}>X</button>
         </div>
 
         <div className="login-popup-inputs">
@@ -28,19 +28,18 @@ const LoginPopup = ({ setShowLogin}) => {
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
-        {currState === "Log in" ? 
-         
-          <p>
-            Already have an account? <span onClick={()=>setCurrState("Log In")}>Login here</span>
-          </p>
-         : 
+         {currState === "Log in" ? 
            <p>
             Create a new account? <span onClick={()=>setCurrState("Sign Up")}>Click here</span>
           </p>
+         : 
+            <p>
+            Already have an account? <span onClick={()=>setCurrState("Log In")}>Login here</span>
+          </p> 
         }
       </form>
     </div>
   );
-};
+}
 
-export default LoginPopup;
+export default SignUpPopup
