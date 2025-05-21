@@ -13,17 +13,48 @@ const addEvent = async (req, res) => {
     end: req.body.end,
     category: req.body.category,
     image: image_filename,
-  })
+  });
 
   try {
     await event.save();
-    res.json({success: true, message: "Event Added"})
+    res.json({ success: true, message: "Event Added" });
   } catch (error) {
-    console.log(error)
-    res.json({success: false, message: "Error"})
+    console.log(error);
+    res.json({ success: false, message: "Error" });
   }
-
-
 };
 
-export { addEvent };
+// All events
+
+const listEvents = async(req, res) => {
+
+  try {
+
+    const events =  await eventModel.find({});
+    res.json({success: true, data: events})
+    
+  } catch (error) {
+    console.log(error);
+    res.json({success: false, message:"Error"})
+  }
+
+}
+
+// remove event
+
+const removeEvent = async(req, res) => {
+  try {
+    const event = await eventModel.findById(req.body.id);
+      fs.unlink(`uploads/${event.image}`, ()=>{})
+      await eventModel.findByIdAndDelete(req.body.id);
+    res.json({success: true, message: "Event Removed"})
+  } catch (error) {
+
+  console.log(error);
+  res.json({success: false, message: "Error"})
+    
+  }
+
+}
+
+export { addEvent, listEvents, removeEvent };

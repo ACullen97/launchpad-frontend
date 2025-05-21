@@ -1,5 +1,5 @@
 import express from "express"
-import { addEvent } from "../controllers/eventController.js"
+import { addEvent, listEvents, removeEvent } from "../controllers/eventController.js"
 import multer from "multer"
 
 const eventRouter = express.Router();
@@ -15,6 +15,8 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage})
 
 eventRouter.post("/add", upload.single("image"), addEvent)
+eventRouter.get("/list", listEvents)
+eventRouter.post("/remove", removeEvent)
 
 
 

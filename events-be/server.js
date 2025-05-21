@@ -16,6 +16,7 @@ connectDB();
 
 // API endpoints
 app.use("/api/event", eventRouter)
+app.use("/images", express.static('uploads'))
 
 
 
