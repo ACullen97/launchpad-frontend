@@ -1,11 +1,11 @@
-import {React, useEffect, useState} from 'react'
+import {React, useState} from 'react'
 import './Add.css';
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 
-const Add = () => {
+const Add = ({url}) => {
 
-    const url = "http://localhost:4000";
 const [image, setImage] = useState(false);
 const [data, setData] = useState({name: "", description:"", start:"", end:"", category:"Sports"})
 
@@ -28,11 +28,12 @@ const response = await axios.post(`${url}/api/event/add`, formData);
 if(response.data.success){
 setData({name: "", description:"", start:"", end:"", category:"Sports"});
 setImage(false)
+toast.success(response.data.message);
 }
-else{}
+else{
+toast.error(response.data.message)
 }
-
-useEffect(() => {console.log(data)}, [data])
+}
 
   return (
     <div className='add'>
@@ -42,7 +43,9 @@ useEffect(() => {console.log(data)}, [data])
             <label htmlFor="image">
                 {image ? <p>Image Upload Successful</p> :  <></>} 
             </label>
-            <input onChange={(e) => {setImage(e.target.files[0])}} type="file" id="image" required/>
+            <input onChange={(e) => {
+                setImage(e.target.files[0]); 
+            }} type="file" id="image" required/>
         </div>
 
         <div className="add-product-name flex-col">
