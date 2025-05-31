@@ -5,20 +5,24 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { eventList } from "../../assets/data-array";
 import moment from  'moment';
-
-
-
+import { useEffect, useState } from 'react';
+import { getEvent } from '../../../../events-be/api';
 
 const BigEventCard = (props) => {
 
-let eventData = eventList[props.param-1]
+     const [event, setEvent] = useState([]);
+      
+       useEffect(() => {
+          getEvent(props.param).then((data) => {
+            setEvent(data.data);
+             
+          }).catch((err)=>{
+            console.log(err)
+          });
+        }, []);
 
-let eventStart = moment(eventData.start).format('MMMM Do YYYY, h:mm:ss a');
-let eventEnd = moment(eventData.end).format('MMMM Do YYYY, h:mm:ss a');
-
-console.log(eventStart);
-
-
+let eventStart = moment(event.start).format('MMMM Do YYYY, h:mm:ss a');
+let eventEnd = moment(event.end).format('MMMM Do YYYY, h:mm:ss a');
 
   return (
     <div>
@@ -26,9 +30,9 @@ console.log(eventStart);
       <div className='big-card-image'>
       </div>
       <Card.Body>
-        <h2>{eventData.title}</h2>
+        <h2>{event.name}</h2>
         <p>
-         {eventData.description}
+         {event.description}
         </p>
         <p>Start: {eventStart}</p>
         <p>End: {eventEnd}</p>

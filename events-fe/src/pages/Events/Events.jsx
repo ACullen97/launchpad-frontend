@@ -1,7 +1,7 @@
 import React from 'react'
 import AllEvents from '../../components/AllEvents/AllEvents'
 
-const Events = () => {
+const Events = ( ) => {
   return (
     <div>
       <AllEvents/>

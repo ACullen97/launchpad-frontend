@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./SignUpPopup.css";
-import { useEffect } from "react";
 import axios from "axios";
 
-const SignUpPopup = ({ setShowSignUp }) => {
+const SignUpPopup = ({ setShowSignUp, setToken }) => {
   const [currState, setCurrState] = useState("Sign Up");
 
   const [data, setData] = useState({ name: "", email: "", password: "" });
+
 
   const onChangeHandler = (e) => {
     const name = e.target.name;
@@ -19,7 +19,7 @@ const SignUpPopup = ({ setShowSignUp }) => {
 
     let newUrl = "http://localhost:4000";
 
-    if (currState === "Login") {
+    if (currState === "Log In") {
       newUrl += "/api/user/login";
     } else {
       newUrl += "/api/user/register";
@@ -28,14 +28,14 @@ const SignUpPopup = ({ setShowSignUp }) => {
     const response = await axios.post(newUrl, data);
 
     if (response.data.success) {
+       setToken(response.data.token);
+    localStorage.setItem("token", response.data.token)
       setShowSignUp(false);
     } else {
       alert(response.data.message);
     }
   };
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+
   return (
     <div className="login-popup">
       <form onSubmit={onSignUp} className="login-popup-container">

@@ -11,7 +11,7 @@ const EventCard = (props) => {
       <div className='card-image'>
       </div>
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title><h4>{props.name}</h4></Card.Title>
         <Card.Text>
          {props.description}
         </Card.Text>

@@ -2,12 +2,23 @@ import React from "react";
 import "./PreviewEvents.css";
 import "../../components/EventCard/EventCard";
 import EventCard from "../../components/EventCard/EventCard";
-import { eventList } from "../../assets/data-array";
+import { useState, useEffect } from "react";
+import getEvents from "../../../../events-be/api";
 
 
 const PreviewEvents = () => {
 
-  const sliced = eventList.slice(0,4)
+    const [events, setEvents] = useState([]);
+  
+   useEffect(() => {
+      getEvents().then((data) => {
+        setEvents(data.data);
+      }).catch((err)=>{
+        console.log(err)
+      });
+    }, []);
+
+  const sliced = events.slice(0,4)
 
   return (
     <div className="preview-events" id="preview-events">

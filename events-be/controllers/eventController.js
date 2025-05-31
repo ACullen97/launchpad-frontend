@@ -40,6 +40,20 @@ const listEvents = async(req, res) => {
 
 }
 
+// get single event
+
+const getEvent = async (req, res) => {
+    try {
+      const event = await eventModel.findOne({_id: req.params.event_id});
+       res.json({success:true, data: event})
+
+    } catch (error) {
+        console.log(error);
+    res.json({success: false, message:`Error`})
+    }
+}
+
+
 // remove event
 
 const removeEvent = async(req, res) => {
@@ -57,4 +71,4 @@ const removeEvent = async(req, res) => {
 
 }
 
-export { addEvent, listEvents, removeEvent };
+export { addEvent, listEvents, getEvent, removeEvent };

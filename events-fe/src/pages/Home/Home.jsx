@@ -2,11 +2,11 @@ import React from 'react'
 import "./Home.css";
 import Header from '../../components/Header/Header'
 import PreviewEvents from '../../components/PreviewEvents/PreviewEvents';
-const Home = () => {
+const Home = (eventList) => {
   return (
     <div>
       <Header/>
-      <PreviewEvents/>
+      <PreviewEvents eventList={eventList}/>
 
     </div>
   )
