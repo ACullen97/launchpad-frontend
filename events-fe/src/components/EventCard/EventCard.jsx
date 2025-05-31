@@ -6,9 +6,13 @@ import { Link } from 'react-router-dom';
 
 const EventCard = (props) => {
 
+  console.log(props);
+
   return (
     <Card className='card-outer'>
       <div className='card-image'>
+     
+           <img className='big-card-image' src={"http://localhost:4000/images/" + props.image}/>
       </div>
       <Card.Body>
         <Card.Title><h4>{props.name}</h4></Card.Title>

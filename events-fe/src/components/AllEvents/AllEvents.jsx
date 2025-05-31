@@ -17,13 +17,12 @@ const AllEvents = () => {
     });
   }, []);
 
-
   return (
     <div className="all-events" id="all-events">
       <h1>All Events</h1>
       <div className="card-holder">
         {events.map((e, i) => {
-            return <EventCard key={i} id={e._id} name={e.name} description={e.description} events={events}/>
+            return <EventCard key={i} id={e._id} name={e.name} description={e.description} image={e.image}/>
         })}
       </div>
     </div>

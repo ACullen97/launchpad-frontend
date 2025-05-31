@@ -24,10 +24,13 @@ const BigEventCard = (props) => {
 let eventStart = moment(event.start).format('MMMM Do YYYY, h:mm:ss a');
 let eventEnd = moment(event.end).format('MMMM Do YYYY, h:mm:ss a');
 
+console.log(event.image)
+
   return (
     <div>
         <Card className='big-card-outer'>
-      <div className='big-card-image'>
+      <div className='big-card-image-container'>
+        <img className='big-card-image' src={"http://localhost:4000/images/" + event.image}/>
       </div>
       <Card.Body>
         <h2>{event.name}</h2>
