@@ -12,9 +12,6 @@ const Sidebar = () => {
         <NavLink to={'/list'} className="sidebar-option">
           List Events
         </NavLink>
-        <div className="sidebar-option">
-          Options
-        </div>
       </div>
     </div>
   )

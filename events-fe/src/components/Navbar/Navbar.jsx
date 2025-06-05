@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, redirect, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import account from "../../assets/account.png";
 
 const Navbar = ({ setShowLogin, setShowSignUp, token, setToken, menu, setMenu }) => {
   
@@ -15,7 +16,11 @@ const Navbar = ({ setShowLogin, setShowSignUp, token, setToken, menu, setMenu })
 
   return (
     <div className="navbar">
-      <h1 className="logo-title">Evently.</h1>
+        <Link to="/">
+      <h1  onClick={() => {
+            setMenu("home");
+          }} className="logo-title">Evently.</h1>
+      </Link>
 
       <div className="navbar-search">
         <div className="navbar-search-icon">
@@ -69,9 +74,10 @@ const Navbar = ({ setShowLogin, setShowSignUp, token, setToken, menu, setMenu })
           </>
         ) : (
           <div className={"navbar-profile"}>
-            <p>Profile Icon</p>
+          <img className={"account-icon"} src={account} alt="account" />
+    
             <ul className="nav-profile-dropdown">
-              <li><a href="http://localhost:5174" target="_blank">Account</a></li>
+              <li><a href="http://localhost:5174/add" target="_blank">Account</a></li>
               <li onClick={logout}>Log Out</li>
             </ul>
           </div>
