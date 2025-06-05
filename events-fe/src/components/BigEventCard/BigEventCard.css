@@ -1,6 +1,6 @@
 .big-card-outer {
   width: 100%;
-  background-color: lightblue;
+  background-color: #dedeff;
   border-radius: 20px;
   height: 100vh;
 }
@@ -19,5 +19,9 @@
 }
 
 .big-card-title {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
+.big-card-description{
+  padding-bottom: 10px;
+}
+

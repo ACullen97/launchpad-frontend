@@ -50,11 +50,13 @@ const BigEventCard = (props) => {
           />
         </div>
         <Card.Body>
-          <h2>{event.name}</h2>
-          <p>{event.description}</p>
+          <h2 className={"big-card-title"}>{event.name}</h2>
+          <p className={"big-card-description"}>{event.description}</p>
           <p>Start: {eventStart}</p>
           <p>End: {eventEnd}</p>
+          <div>&nbsp;</div>
           <a href={googleUrl} target="_blank"><Button variant="primary">Add to Calendar</Button></a>
+ 
         </Card.Body>
       </Card>
     </div>

@@ -7,6 +7,7 @@ import ViewEvent from './pages/ViewEvent/ViewEvent.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import LoginPopup from './components/LoginPopup/LoginPopup.jsx'
 import SignUpPopup from './components/SignUpPopup/SignUpPopup.jsx'
+import About from './components/About/About.jsx'
 
 
 const App = () => {
@@ -17,16 +18,19 @@ const App = () => {
 
   const [token, setToken] = useState("");
 
+  const [menu, setMenu] = useState("home");
+
   return (
     <>
     {showLogin ? <LoginPopup setShowLogin={setShowLogin} setToken={setToken}/> : <></>}
      {showSignUp ? <SignUpPopup setShowSignUp={setShowSignUp} setToken={setToken}/> : <></>}
     <div className='app'>
-      <Navbar setShowLogin={setShowLogin} setShowSignUp={setShowSignUp} token={token} setToken={setToken}/>
+      <Navbar setShowLogin={setShowLogin} setShowSignUp={setShowSignUp} token={token} setToken={setToken} menu={menu} setMenu={setMenu}/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home  menu={menu} setMenu={setMenu}/>}/>
         <Route path="/events" element={<Events/>}/>
         <Route path="/events/:id" element={<ViewEvent/>}/>
+        <Route path="/about" element={<About/>}></Route>
       </Routes>
 
 

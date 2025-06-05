@@ -1,7 +1,7 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('/root/northcoders/launchpad/launchpad-frontend/events-fe/src/assets/crowd-event-hero.jpg') no-repeat;
+    background: url('/root/northcoders/launchpadv2/launchpad-frontend/events-fe/src/assets/crowd-event-hero.jpg') no-repeat;
     position: relative;
     background-size: cover;
     background-position: 0px -30px;
@@ -36,7 +36,7 @@
 
 .header-contents button{
     border: none;
-    color: #131388;
+    color: #151568;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: #fff;

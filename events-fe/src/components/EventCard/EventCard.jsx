@@ -6,20 +6,18 @@ import { Link } from 'react-router-dom';
 
 const EventCard = (props) => {
 
-  console.log(props);
-
   return (
     <Card className='card-outer'>
       <div className='card-image'>
-     
-           <img className='big-card-image' src={"http://localhost:4000/images/" + props.image}/>
+           <img className='card-image' src={"http://localhost:4000/images/" + props.image}/>
       </div>
-      <Card.Body>
-        <Card.Title><h4>{props.name}</h4></Card.Title>
-        <Card.Text>
+      <Card.Body className='card-body'>
+        <div className={'card-title'}><h4>{props.name}</h4></div>
+       <div className={"card-description"}>
          {props.description}
-        </Card.Text>
-        <Link to={`/events/${props.id}`}><Button variant="primary">View Event</Button></Link>
+   </div>
+       <div>&nbsp;</div>
+        <Link to={`/events/${props.id}`}><button className={"btn"}>View Event</button></Link>
       </Card.Body>
     </Card>
   )

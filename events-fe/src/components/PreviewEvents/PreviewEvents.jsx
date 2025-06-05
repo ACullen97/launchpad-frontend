@@ -20,12 +20,14 @@ const PreviewEvents = () => {
 
   const sliced = events.slice(0,4)
 
+
+
   return (
     <div className="preview-events" id="preview-events">
       <h1>Latest Events</h1>
       <div className="card-holder">
         {sliced.map((e, i) => {
-            return <EventCard key={i} id={e.id} name={e.name} description={e.description} image={e.image}/>
+            return <EventCard key={i} id={e._id} name={e.name} description={e.description} image={e.image}/>
         })}
        
       </div>

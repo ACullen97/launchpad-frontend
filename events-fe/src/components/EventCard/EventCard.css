@@ -1,16 +1,43 @@
 .card-outer {
   width: 18rem;
-  background-color: lightblue;
+  background-color: #dedeff;
   border-radius: 20px;
-
-
- 
 }
 
 .card-image{
  width: 18rem;
  height: 18rem;
- object-fit: contain;
+  width: 100%;
+  object-fit: cover;
+  max-height: 500px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 
 }
+
+.card-title{
+  padding-bottom: 8px;
+}
+
+.card-description{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-body{
+  padding: 15px;
+}
+
+.btn{
+    border: none;
+    color: #151568;
+    font-weight: 500;
+    padding: 0.5vw 1.5vw;
+    background-color: #fff;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
 

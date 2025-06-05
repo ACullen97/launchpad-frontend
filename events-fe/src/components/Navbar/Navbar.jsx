@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ setShowLogin, setShowSignUp, token, setToken }) => {
-  const [menu, setMenu] = useState("home");
+const Navbar = ({ setShowLogin, setShowSignUp, token, setToken, menu, setMenu }) => {
+  
 
   const navigate = useNavigate;
 
@@ -19,7 +19,7 @@ const Navbar = ({ setShowLogin, setShowSignUp, token, setToken }) => {
 
       <div className="navbar-search">
         <div className="navbar-search-icon">
-          <p>Search Events</p>
+          <p style={{color: "white"}}>Search Events</p>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ const Navbar = ({ setShowLogin, setShowSignUp, token, setToken }) => {
           }}
           className={menu === "contact" ? "active" : ""}
         >
-          Contact
+            <Link to="/about">About</Link>
         </li>
       </ul>
       <div className="navbar-right">
@@ -71,7 +71,7 @@ const Navbar = ({ setShowLogin, setShowSignUp, token, setToken }) => {
           <div className={"navbar-profile"}>
             <p>Profile Icon</p>
             <ul className="nav-profile-dropdown">
-              <li>Account</li>
+              <li><a href="http://localhost:5174" target="_blank">Account</a></li>
               <li onClick={logout}>Log Out</li>
             </ul>
           </div>

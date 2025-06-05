@@ -7,19 +7,21 @@ const Pagination = ({ eventsPerPage, totalEvents, paginate }) => {
     pageNumbers.push(i);
   }
 
-  console.log(pageNumbers, "pageNmbers");
   return (
     <nav className="pagination-nav">
-      <p>Hello</p>
-      <ul className="pagination">
+      <div className="pagination">
+        <a onClick={() => paginate(1)}>&laquo;</a>
         {pageNumbers.map((number) => {
           return (
-            <li key={number} className={"page-item"}>
-              <a onClick={() => paginate(number)}>{number}</a>
-            </li>
+            <a key={number} onClick={() => paginate(number)}>
+              {number}
+            </a>
           );
         })}
-      </ul>
+        <a onClick={() => paginate(pageNumbers[pageNumbers.length - 1])}>
+          &raquo;
+        </a>
+      </div>
     </nav>
   );
 };
