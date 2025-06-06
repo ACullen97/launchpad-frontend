@@ -1,5 +1,5 @@
 .card-outer {
-  width: 18rem;
+  width: 100%;
   background-color: #dedeff;
   border-radius: 20px;
 }
@@ -40,4 +40,9 @@
     cursor: pointer;
 }
 
+@media (max-width: 750px){
+    .card-outer{
+        display: block;
+    }
+}
 

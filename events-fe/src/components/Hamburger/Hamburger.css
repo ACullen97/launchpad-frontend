@@ -1,0 +1,27 @@
+.hamburger-dropdown{
+    text-align: right;
+    display: flex;
+    width: 100%;
+}
+
+.hamburger-dropdown-left{
+    background-color: #fff;
+    width: 60%;
+}
+
+.hamburger-dropdown-right{
+    text-align: center;
+     background-color: #dedeff;
+     width: 40%;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+     padding: 10px; 
+}
+.hamburger-menu-item{
+    padding: 3px;
+}
+
+.hamburger-menu-item:hover{
+    background-color: #151568;
+    color: #fff;
+}

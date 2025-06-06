@@ -1,6 +1,6 @@
 .sidebar{
-    width: 18%;
     min-height: 100vh;
+    min-width: 200px;
     border: 1.5px solid #a9a9a9;
     border-top: 0;
     font-size: max(1vw, 10px);
@@ -11,7 +11,7 @@
     padding-left: 20%;
     display: block;
     gap: 20px;
-    width: 100%;;
+    width: 100%;
 }
 
 .sidebar-option{

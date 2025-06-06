@@ -8,3 +8,18 @@
 .all-events h1{
     padding-bottom: 10px;
 }
+
+@media (max-width: 1000px){
+.card-holder{
+
+    grid-template-columns: 50% 50%;
+  
+}}
+
+@media (max-width: 600px){
+.card-holder{
+
+    grid-template-columns: 100%;
+  
+}
+}

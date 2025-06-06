@@ -10,11 +10,10 @@ const About = () => {
         <img src={code1} alt="code" />
       </div>
       <div className="about-right">
-        <h3>Founder</h3>
-        <h2>Alex Cullen</h2>
+        <h2>About Us</h2>
         <br />
         <p>
-         Hi I'm Alex, a multi skilled creative trained in web development. I started out Purple Tiger as a place to share my music, which then branched out into a variety of creative disciplines, such as web development, media and audio production. I love creating digital products with an artistic flair and have completed a range of different projects for clients and personal endeavors. Thank you for checking out my portfolio!
+         Hi we are Evently, an events platform designed to host events in the local area. Starting out as a platform to help others connect with the events they are interested in, then branching out into a variety of sectors such as business, sports and nightlife. We love helping people connect their events to a wider audience and creating a positive impact for both the host and attendee. Thank you for checking out Evently!
         </p>
       </div>
     </div>
@@ -27,7 +26,7 @@ const About = () => {
            <ul>
             <li>admin@evently.com</li>
             <li>07387 076 782</li>
-            <li>@purpletigercreations</li>
+            <li>@eventlyevents</li>
            </ul>
       </div>
       <div className="about-left">
