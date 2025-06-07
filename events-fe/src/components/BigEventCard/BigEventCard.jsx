@@ -57,7 +57,7 @@ const BigEventCard = (props) => {
           <p><strong>End:</strong></p>
           <p>{eventEnd}</p>
           <div>&nbsp;</div>
-          <a href={googleUrl} target="_blank"><Button variant="primary">Add to Calendar</Button></a>
+          <a href={googleUrl} target="_blank"><Button className="add-to-calendar" variant="primary">Add to Calendar</Button></a>
  
         </Card.Body>
       </Card>

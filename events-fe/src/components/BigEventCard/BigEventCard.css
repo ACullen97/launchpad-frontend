@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #dedeff;
   border-radius: 20px;
+  margin-top: 20px;
 
 }
 
@@ -27,3 +28,9 @@
   font-size: 18px;
 }
 
+@media (max-width: 900px){
+.add-to-calendar{
+  font-size: 18px;
+  padding: 12px;
+}
+}

@@ -27,3 +27,9 @@
     cursor: pointer;
 }
 
+@media(max-width: 500px){
+.add-product-name, .add-product-description{
+    width: max(40%, 240px);
+}
+
+}
