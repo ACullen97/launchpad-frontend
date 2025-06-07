@@ -49,6 +49,10 @@
 
 @media (max-width: 650px) {
 
+    .header{
+        background-position: 0px 0px;
+    }
+
     .header-contents h2{
     font-weight: 500;
     color: white;
@@ -62,6 +66,8 @@
 
     .header-contents{
         max-width: 80%;
+        margin-bottom: 0px;
+        margin-left: 10px;
     }
 
 }

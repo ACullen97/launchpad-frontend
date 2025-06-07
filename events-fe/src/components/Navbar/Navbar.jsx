@@ -25,92 +25,93 @@ const Navbar = ({
   return (
     <>
       <div className="navbar">
-        <Link to="/">
-          <h1
-            onClick={() => {
-              setMenu("home");
-            }}
-            className="logo-title"
-          >
-            Evently.
-          </h1>
-        </Link>
+        <div className="navbar-contents">
+          <Link to="/">
+            <h1
+              onClick={() => {
+                setMenu("home");
+              }}
+              className="logo-title"
+            >
+              Evently.
+            </h1>
+          </Link>
 
-        <ul className="navbar-menu">
-          <li
-            onClick={() => {
-              setMenu("home");
-            }}
-            className={menu === "home" ? "active" : ""}
-          >
-            <Link to="/">Home</Link>
-          </li>
-          <li
-            onClick={() => {
-              setMenu("events");
-            }}
-            className={menu === "events" ? "active" : ""}
-          >
-            <Link to="/events">Events</Link>
-          </li>
-          <li
-            onClick={() => {
-              setMenu("contact");
-            }}
-            className={menu === "contact" ? "active" : ""}
-          >
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-        <div className="navbar-right">
-          {!token ? (
-            <div className="navbar-right-logged-out">
-              <button
-                onClick={() => {
-                  setShowLogin(true);
-                }}
-              >
-                Log In
-              </button>
-              <button
-                onClick={() => {
-                  setShowSignUp(true);
-                }}
-              >
-                Sign Up
-              </button>
-            </div>
-          ) : (
-            <div className={"navbar-profile"}>
-              <img className={"account-icon"} src={account} alt="account" />
+          <ul className="navbar-menu">
+            <li
+              onClick={() => {
+                setMenu("home");
+              }}
+              className={menu === "home" ? "active" : ""}
+            >
+              <Link to="/">Home</Link>
+            </li>
+            <li
+              onClick={() => {
+                setMenu("events");
+              }}
+              className={menu === "events" ? "active" : ""}
+            >
+              <Link to="/events">Events</Link>
+            </li>
+            <li
+              onClick={() => {
+                setMenu("contact");
+              }}
+              className={menu === "contact" ? "active" : ""}
+            >
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+          <div className="navbar-right">
+            {!token ? (
+              <div className="navbar-right-logged-out">
+                <button
+                  onClick={() => {
+                    setShowLogin(true);
+                  }}
+                >
+                  Log In
+                </button>
+                <button
+                  onClick={() => {
+                    setShowSignUp(true);
+                  }}
+                >
+                  Sign Up
+                </button>
+              </div>
+            ) : (
+              <div className={"navbar-profile"}>
+                <img className={"account-icon"} src={account} alt="account" />
 
-              <ul className="nav-profile-dropdown">
-                <li>
-                  <a href="http://localhost:5174/add" target="_blank">
-                    Account
-                  </a>
-                </li>
-                <li onClick={logout}>Log Out</li>
-              </ul>
+                <ul className="nav-profile-dropdown">
+                  <li>
+                    <a href="http://localhost:5174/add" target="_blank">
+                      Account
+                    </a>
+                  </li>
+                  <li onClick={logout}>Log Out</li>
+                </ul>
+              </div>
+            )}
+
+             <button
+            onClick={() => {
+              setShow(!show);
+              console.log(show, "status");
+            }}
+            className={"hamburger"}
+          >
+            <div className={"hamburger-outer"}>
+              <div className="hamburger-inner"></div>
+              <div className="hamburger-inner"></div>
+              <div className="hamburger-inner"></div>
             </div>
-          )}
+          </button>
         </div>
-
-        <button
-          onClick={() => {
-            setShow(!show);
-            console.log(show, "status");
-          }}
-          className={"hamburger"}
-        >
-          <div className={"hamburger-outer"}>
-            <div className="hamburger-inner"></div>
-            <div className="hamburger-inner"></div>
-            <div className="hamburger-inner"></div>
-          </div>
-        </button>
       </div>
-      <div       className={show ? "show" : "hide"}>
+      <div className={show ? "show" : "hide"}>
         <Hamburger
           show={show}
           setShow={setShow}
@@ -122,6 +123,9 @@ const Navbar = ({
           setMenu={setMenu}
         />
       </div>
+          </div>
+
+         
     </>
   );
 };

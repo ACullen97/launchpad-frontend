@@ -1,8 +1,16 @@
 .navbar {
-  padding: 20px 0px;
+width: 100%;
+ background-color: #dedeff;
+}
+
+.navbar-contents{
+    padding: 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
+  width: 80%;
+  margin: auto;
 }
 
 .navbar .logo {
@@ -36,12 +44,14 @@
 .navbar button {
   background: transparent;
   font-size: 16px;
-  color: #49557e;
-  border: 1px solid #151568;
+  color: #151568;
+  border: 0px solid #151568;
+  background-color: #fff;
   padding: 10px 30px;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
+  margin-left: 10px;
 }
 
 
@@ -63,6 +73,7 @@
   display: none;
   right: 0;
   z-index: 1;
+  background-color: #fff
 }
 
 .navbar-profile:hover .nav-profile-dropdown {

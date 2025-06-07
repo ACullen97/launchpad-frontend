@@ -24,8 +24,10 @@ const App = () => {
     <>
     {showLogin ? <LoginPopup setShowLogin={setShowLogin} setToken={setToken}/> : <></>}
      {showSignUp ? <SignUpPopup setShowSignUp={setShowSignUp} setToken={setToken}/> : <></>}
+
+       <Navbar setShowLogin={setShowLogin} setShowSignUp={setShowSignUp} token={token} setToken={setToken} menu={menu} setMenu={setMenu}/>
     <div className='app'>
-      <Navbar setShowLogin={setShowLogin} setShowSignUp={setShowSignUp} token={token} setToken={setToken} menu={menu} setMenu={setMenu}/>
+    
       <Routes>
         <Route path="/" element={<Home  menu={menu} setMenu={setMenu}/>}/>
         <Route path="/events" element={<Events/>}/>
