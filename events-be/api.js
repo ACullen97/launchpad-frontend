@@ -1,14 +1,14 @@
 import axios from 'axios'
 export const getEvents = () => {
 
-    return axios.get(`http://localhost:4000/api/event/list`).then(({data}) => {
+    return axios.get(`https://launchpad-frontend-dcao.onrender.com/api/event/list`).then(({data}) => {
         return data;
     })
 }
 
 export const getEvent = (id) => {
 
-    return axios.get(`http://localhost:4000/api/event/${id}`).then(({data}) => {
+    return axios.get(`https://launchpad-frontend-dcao.onrender.com/api/event/${id}`).then(({data}) => {
         return data
     })
 }

@@ -46,7 +46,7 @@ const BigEventCard = (props) => {
         <div className="big-card-image-container">
           <img
             className="big-card-image"
-            src={"http://localhost:4000/images/" + event.image}
+            src={"https://launchpad-frontend-dcao.onrender.com/images/" + event.image}
           />
         </div>
         <Card.Body>

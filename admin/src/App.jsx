@@ -11,7 +11,7 @@ import 'react-toastify/ReactToastify.css'
 
 const App = () => {
 
-const url = "http://localhost:4000" 
+const url = "https://launchpad-frontend-dcao.onrender.com" 
 
   return (
     <div>

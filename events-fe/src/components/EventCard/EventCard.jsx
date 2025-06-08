@@ -9,7 +9,7 @@ const EventCard = (props) => {
   return (
     <Card className='card-outer'>
       <div className='card-image'>
-           <img className='card-image' src={"http://localhost:4000/images/" + props.image}/>
+           <img className='card-image' src={"https://launchpad-frontend-dcao.onrender.com/images/" + props.image}/>
       </div>
       <Card.Body className='card-body'>
         <div className={'card-title'}><h4>{props.name}</h4></div>
