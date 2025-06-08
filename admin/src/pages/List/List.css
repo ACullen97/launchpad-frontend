@@ -32,7 +32,9 @@
     cursor: pointer;
 }
 
-@media(max-width: 600px){
+@media(max-width: 500px){
+
+    .list{width: 100%;}
     .list-table-format{
      
         grid-template-columns: 1fr 1fr 1fr;

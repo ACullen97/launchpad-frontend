@@ -43,6 +43,7 @@
 }
 
 @media(max-width: 500px){
+    .sidebar{display: none}
     .sidebar-option p{
         display: none;
     }

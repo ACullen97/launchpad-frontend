@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
+import MobileButton from './components/MobileButton/MobileButton'
 import {Route, Routes} from 'react-router-dom'
 import Add from './pages/Add/Add'
 import List from './pages/List/List'
@@ -17,6 +18,7 @@ const url = "http://localhost:4000"
       <ToastContainer/>
       <Navbar/>
       <hr/>
+      <MobileButton/>
       <div className="app-content">
       <Sidebar/>
       <Routes>
