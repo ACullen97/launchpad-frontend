@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 export const getEvents = () => {
 
     return axios.get(`https://launchpad-frontend-dcao.onrender.com/api/event/list`).then(({data}) => {
