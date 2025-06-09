@@ -4,8 +4,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server.js",
-     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'"
+    "server": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
