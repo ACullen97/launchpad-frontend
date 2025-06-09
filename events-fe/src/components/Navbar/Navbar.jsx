@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, redirect, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import account from "../../assets/account.png";
-import Hamburger from "../Hamburger/Hamburger";
+import Hamburger from "../Hamburger/Hamburger.jsx";
 
 const Navbar = ({
   setShowLogin,

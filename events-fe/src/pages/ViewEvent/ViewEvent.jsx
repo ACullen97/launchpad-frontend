@@ -1,5 +1,5 @@
 import React from 'react'
-import BigEventCard from '../../components/BigEventCard/BigEventCard'
+import BigEventCard from '../../components/BigEventCard/BigEventCard.jsx'
 import { eventList } from "../../assets/data-array";
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';

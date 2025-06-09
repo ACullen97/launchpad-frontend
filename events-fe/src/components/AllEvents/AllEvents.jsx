@@ -1,7 +1,7 @@
 import React from 'react'
 import './AllEvents.css'
 import EventCard from '../EventCard/EventCard';
-import getEvents from '/root/northcoders/launchpadv2/launchpad-frontend/events-be/api.js';
+import getEvents from '../../../../events-be/api.js';
 import { useEffect, useState } from "react";
 import Pagination from '../Pagination/Pagination.jsx';
 

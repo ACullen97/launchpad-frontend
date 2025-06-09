@@ -1,9 +1,9 @@
 import React from "react";
 import "./PreviewEvents.css";
-import "../../components/EventCard/EventCard";
-import EventCard from "../../components/EventCard/EventCard";
+import "../../components/EventCard/EventCard.jsx";
+import EventCard from "../../components/EventCard/EventCard.jsx";
 import { useState, useEffect } from "react";
-import getEvents from "/root/northcoders/launchpadv2/launchpad-frontend/events-be/api.js" 
+import getEvents from "../../../../events-be/api.js";
 
 
 const PreviewEvents = () => {

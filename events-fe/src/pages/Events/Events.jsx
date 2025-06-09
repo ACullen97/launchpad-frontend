@@ -1,5 +1,5 @@
 import React from 'react'
-import AllEvents from '../../components/AllEvents/AllEvents'
+import AllEvents from '../../components/AllEvents/AllEvents.jsx'
 
 const Events = ( ) => {
   return (

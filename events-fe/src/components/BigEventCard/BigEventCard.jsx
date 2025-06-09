@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import { eventList } from "../../assets/data-array";
 import moment from "moment";
 import { useEffect, useState } from "react";
-import { getEvent } from "/root/northcoders/launchpadv2/launchpad-frontend/events-be/api.js";
+import { getEvent } from "../../../../events-be/api.js";
 import { google, outlook, office365, yahoo } from "calendar-link";
 
 const BigEventCard = (props) => {
