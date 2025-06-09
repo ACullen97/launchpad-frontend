@@ -87,7 +87,7 @@ const Navbar = ({
 
                 <ul className="nav-profile-dropdown">
                   <li>
-                    <a href="http://localhost:5174/add" target="_blank">
+                    <a href="https://launchpad-frontend-admin.onrender.com/add" target="_blank">
                       Account
                     </a>
                   </li>
