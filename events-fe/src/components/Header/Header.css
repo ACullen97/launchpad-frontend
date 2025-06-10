@@ -1,7 +1,8 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('src/assets/crowd-event-hero.jpg') no-repeat;
+    background-image: url('../../assets/crowd-event-hero.jpg');
+    background-repeat: no-repeat;
     position: relative;
     background-size: cover;
     background-position: 0px -30px;
