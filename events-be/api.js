@@ -1,4 +1,5 @@
 import axios from "axios";
+
 export const getEvents = () => {
 
     return axios.get(`https://launchpad-frontend-dcao.onrender.com/api/event/list`).then(({data}) => {
@@ -15,4 +16,4 @@ export const getEvent = (id) => {
 
 
 
-export default getEvents
+export default getEvents;
